@@ -1,0 +1,25 @@
+[ cars
+id(int)/owner/model/color
+1/charles/mercedez/black
+2/john/bmw/blue
+3/richard/nissan/red
+4/bobby/vw/white
+5/jonah/nissan/red
+6/plob/chevrolet/brown
+7/juan/bmw/green
+]
+[ dogs
+id(int)/name/breed
+1/primo/pitbull
+2/chip/golden
+3/juan/poodle
+4/winston/terrier
+5/pablo/bulldog
+]
+[ people
+username/name/age(int)/nationality
+red123/juan/34/colombia
+tres567/kian/22/us
+abc123/john/43/UK
+fred567/freddy/39/china
+]

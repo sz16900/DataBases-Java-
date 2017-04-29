@@ -1,0 +1,45 @@
+At this stage, I feel as if I've finished a quite robust, well organized
+"beginning of a database". Let me explain why I've put the previous statement in
+quotation marks. I say "beginning" because the program currently deals with input/
+output from the user. It can create tables, delete tables, update tables, create
+new databases (which are files), display individual tables based on the
+table name. When the user types in "done", the entire database is re-written
+onto the file; any changes will be reflected in the newly created file.
+
+At this stage I sort of mixed the "User Interface" and "Types" together onto one
+single stage; so, potentially, you could say that this stage counts for two. And
+it sure felt like that. This is the stage where I spent the majority of the time
+working, implementing and refactoring.
+
+I created a Display class which sort of works like the brain behind the whole
+program (at this stage, of course). I takes the users input/output and thus
+does what it is supposed to. Because it deals with the Database class directly,
+these two classes are inter-connected. However, they are no cyclical, in fact, I
+don't think any of the classes are cyclical, as it works like and arrow, from
+the top down.
+
+The Display class creates a Database which in turn uses it depending on the users
+command. Because the user needs to create, update, etc the databse, I though
+convinient for this to take place.
+
+
+Refactoring:
+
+1) The first thing I realized (after speaking to my professor) was that I never
+needed to print anything into the file with borders, but, rather, a file which
+contains the data needed for the tables to show up in the terminal. So I had to
+take care of some of those functions and move them to Display class. It was
+not a big refactoring since printing in files and printing to screen are both
+quite similar.
+2) I had to add a new function in the Database class in order to allow the user
+to delete Tables permanently from it.
+3) Added a new function in Database class called renameTable(). It deletes an
+old talbe and inserts that same table with a new tableName.
+
+
+Testing:
+
+Because the Display class uses all of the other classes in order to do its logic,
+all of the testing is done, in fact, in the other classes but this once. If I had
+to test in this class, I would be testing for, basically, printing out onto the
+screen.
